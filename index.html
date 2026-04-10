@@ -237,9 +237,9 @@ function getStatusConfig(mapped) {
   if (m === 'suspended' || m === 'suspended - fee pending') return {
     cls: 'warn', icon: '!',
     label: mapped,
-    sub: m === 'suspended - fee pending'
-      ? 'Your registration is suspended due to pending fee. Please contact NPTEL.'
-      : 'Your NPTEL registration has been suspended. Please contact NPTEL.'
+    sub: m === 'suspended'
+      ? 'Suspended. Contact Dean's Office.'
+      : 'Suspended. Contact Dean's Office.'
   };
   if (m === 'nptel not registered') return {
     cls: 'gray', icon: '–',
@@ -249,7 +249,7 @@ function getStatusConfig(mapped) {
   if (m === 'discontinued') return {
     cls: 'gray', icon: '–',
     label: 'Discontinued',
-    sub: 'Your NPTEL course registration has been discontinued.'
+    sub: 'discontinued.'
   };
   return {
     cls: 'gray', icon: '–',
